@@ -11,7 +11,7 @@ class CountriesProvider with ChangeNotifier {
   bool get isLoading => _isLoading;
 
   Future<void> fetchCountries() async {
-    if (_countries.isNotEmpty) return; // Avoid unnecessary re-fetching
+    if (_countries.isNotEmpty) return;
 
     _isLoading = true;
     notifyListeners();

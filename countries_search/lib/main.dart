@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import './providers/countriesprovider.dart';
 import './screens/homescreen.dart';
 import './screens/searchscreen.dart';
+import './screens/countrydetailscrees.dart';
+import './models/countrymodel.dart';
+import './providers/countriesprovider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CountriesProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,18 +20,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => CountriesProvider()),
-      ],
-      child: MaterialApp(
-        title: 'Countries Explorer',
-        theme: ThemeData(primarySwatch: Colors.blue),
-        home: const HomeScreen(),
-        routes: {
-          '/search': (ctx) => const SearchScreen(),
-        },
+    return MaterialApp(
+      title: 'Countries Explorer',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/search': (context) => const SearchScreen(),
+        '/details': (context) {
+          final country = ModalRoute.of(context)!.settings.arguments as Country;
+          return CountryDetailScreen(country: country);
+        },
+      },
     );
   }
 }
