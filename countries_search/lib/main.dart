@@ -21,10 +21,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,  // Add this line
-      title: 'Countries Explorer',
+      debugShowCheckedModeBanner: false,
+      title: 'Explore the world',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
       initialRoute: '/',
       routes: {

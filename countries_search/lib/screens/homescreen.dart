@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/countriesprovider.dart';
 import '../widgets/countrycard.dart';
-
+//This is home screen 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             pinned: true,
             expandedHeight: 120,
             flexibleSpace: FlexibleSpaceBar(
-              title: const Text('Countries Explorer'),
+              title: const Text('Explore the world'),
               background: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
