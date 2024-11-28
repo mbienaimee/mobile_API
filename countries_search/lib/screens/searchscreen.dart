@@ -35,7 +35,10 @@ class _SearchScreenState extends State<SearchScreen> {
     final countriesProvider = Provider.of<CountriesProvider>(context);
     final filteredCountries = countriesProvider.countries.where((country) {
       return country.name.toLowerCase().contains(_searchQuery.toLowerCase()) ||
-          (country.capital?.toLowerCase().contains(_searchQuery.toLowerCase()) ?? false);
+          (country.capital
+                  ?.toLowerCase()
+                  .contains(_searchQuery.toLowerCase()) ??
+              false);
     }).toList();
 
     return Scaffold(

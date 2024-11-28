@@ -11,9 +11,6 @@ A Flutter application that allows users to search for countries and view detaile
 - Installation
 - Usage
 
-
-
-
 ## Features
 
 - Search for country by name.
@@ -27,28 +24,28 @@ A Flutter application that allows users to search for countries and view detaile
   - languages
   - currencies
 
-
 -The design is responsive in all kind of screens.
 -Correct data that was restrieved from RESTful Api.
-
-
 
 ## Installation
 
 To run this app locally, follow these steps:
 
-1. **Clone  repository:**
+1. **Clone repository:**
+
    ```bash
    git clone https://github.com/mbienaimee/mobile_API.git
    ```
 
 2. **Navigate to the project directory:**
+
    ```bash
    cd countries_search
    ```
 
 3. **Install dependencies:**
    Make sure you have Flutter installed on your machine. Then run:
+
    ```bash
    flutter pub get
    ```
@@ -69,16 +66,16 @@ To run this app locally, follow these steps:
 5. Get all detals on specified country
 6. click on back Icon when you want to come on the first page that list all countries
 
-
 ## API Reference
 
 This app uses the following RESTful API:
 
 - **Base URL:** `https://restcountries.com/v3.1/`
-  
+
 ### Endpoints
 
 1. **Get all countries:**
+
    - **Endpoint:** `/all`
    - **Method:** GET
    - **Description:** Get the list of all countries.
@@ -100,28 +97,27 @@ GET https://restcountries.com/v3.1/name/south%20africa
 
 ```json
 [
-    {
-        "name": {
-            "common": "South Africa",
-            "official": "Republic of South Africa"
-        },
-        "capital": "Pretoria",
-        "population": 59308690,
-        "area": 1219090,
-        "languages": {
-            "eng": "English",
-            "afr": "Afrikaans"
-        },
-        "currencies": {
-            "ZAR": {
-                "name": "South African rand",
-                "symbol": "R"
-            }
-        },
-        "flags": {
-            "png": "https://flagcdn.com/w320/za.png"
-        }
+  {
+    "name": {
+      "common": "South Africa",
+      "official": "Republic of South Africa"
+    },
+    "capital": "Pretoria",
+    "population": 59308690,
+    "area": 1219090,
+    "languages": {
+      "eng": "English",
+      "afr": "Afrikaans"
+    },
+    "currencies": {
+      "ZAR": {
+        "name": "South African rand",
+        "symbol": "R"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/za.png"
     }
+  }
 ]
 ```
-
